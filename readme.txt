@@ -13,3 +13,5 @@ Menne, M.J., I. Durre, B. Korzeniewski, S. McNeal, K. Thomas, X. Yin, S. Anthony
 NOAA National Climatic Data Center: http://doi.org/10.7289/V5D21VHZ [Accessed 2 March 2018]
 
 The current point of this project is for a user to easily be able to sift through this database in order to find information on weather for specific dates and locations.
+
+This project is an opportunity for me to learn more about how to handle large amounts of information, specifically using pandas to analyze csv files.
