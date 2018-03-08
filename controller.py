@@ -83,25 +83,26 @@ def LocateData(stat_id, userInfo, weather_df):
     dataFound=False #conditional for data-sifting loops
     dataIndex=0 #row of data
     iterate = 1000 #used to 
+    dataList = []
     while(not dataFound):
         try: #chance for bound error
             dataPoint = weather_df.iloc[dataIndex] #could except
             if (int(str(dataPoint['DATE'])[4:]) > int(userInfo['DAY'])): #passed over data
                 while(not dataFound):
                     dataPoint = weather_df.iloc[dataIndex]
-                    userDate = int(userInfo['DAY'])
-                    tempDate = int(str(dataPoint['DATE'])[4:])
+                    userDate = int(userInfo['DAY']) #user input date
+                    tempDate = int(str(dataPoint['DATE'])[4:]) #iterator date
                     temp_id = dataPoint['STATION']
                     if (dataIndex%1000 == 0):
                         print(dataIndex)
                     if (tempDate == userDate and
                             stat_id == temp_id): #data we are looking for
-                        dataFound = True #loops will exit
-                    elif (tempDate < userDate): #data doesn't exist
-                        print("Sorry, no data found with this information")
-                        sys.exit()
-                    else:
-                        dataIndex -= 1
+                        dataList.append(dataPoint)
+                    elif (tempDate < userDate): #no more data to find
+                        dataFound = True #loops will exit 
+                    dataIndex -= 1
+                    if (dataIndex < 0):
+                        dataFound = True
             else:
                 dataIndex += iterate
         except IndexError: #exceeded bounds for dataframe
@@ -109,13 +110,17 @@ def LocateData(stat_id, userInfo, weather_df):
             while(not dataFound):
                 try: #similar chance for bounds error
                     dataPoint = weather_df.iloc[dataIndex]
-                    if (int(str(dataPoint['DATE'])[4:]) == int(userInfo['DAY']) and
+                    userDate = int(userInfo['DAY']) #user input date
+                    tempDate = int(str(dataPoint['DATE'])[4:]) #iterator date
+                    temp_id = dataPoint['STATION']
+                    if (tempDate == userDate and
                             stat_id == dataPoint['STATION']): #data
+                        dataList.append(dataPoint)
+                    elif (tempDate > userDate): #all data for day is found
                         dataFound = True
-                    else:
-                        dataIndex += 1
-                except IndexError: #bound error again, data doesn't exist
-                    print("Sorry, no data found with this information..")
-                    sys.exit()
-    print(weather_df.loc[dataIndex])
+                    dataIndex += 1
+                except IndexError: #csv file ends, all data found
+                    dataFound = True
+    
+    return dataList
 

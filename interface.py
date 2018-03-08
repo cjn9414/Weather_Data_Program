@@ -1,4 +1,4 @@
-from pandas import DataFrame
+import pandas as pd
 
 def GetInfo():
     year = input("What year? (yyyy)")
@@ -20,3 +20,12 @@ def GetStation(relevent_stations):
     return station_id
 
 
+def printData(dataList): #prints data found from controller
+    if (not dataList): #no data was recorded
+        print("No data to report")
+    else:
+        translator = pd.read_csv("./ghcn_translator.csv", header = None, sep=",")
+        for data in dataList:
+            for index, row in translator.iterrows():
+                if (str(row[0]).strip() == str(data['ELEMENT'])):
+                    print(row[1].strip() + " " + str(data['VALUE'])) #print data
