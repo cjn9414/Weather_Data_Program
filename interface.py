@@ -21,6 +21,8 @@ def GetStation(relevent_stations):
 
 
 def printData(dataList): #prints data found from controller
+    printNonCore = False
+    coreResponse = False
     if (not dataList): #no data was recorded
         print("No data to report")
     else:
@@ -28,4 +30,13 @@ def printData(dataList): #prints data found from controller
         for data in dataList:
             for index, row in translator.iterrows():
                 if (str(row[0]).strip() == str(data['ELEMENT'])):
-                    print(row[1].strip() + " " + str(data['VALUE'])) #print data
+                    if (str(row[2]) == "True"):
+                        print(row[1].strip() + " " + str(data['VALUE'])) #print data
+                    else:
+                        if (not coreResponse):
+                            response = input("This data contains elements that are not core elements. Would you like these elements printed as well? (y/n)")
+                            if (response == 'y' or response == 'Y'):
+                                printNonCore = True
+                            coreResponse = True
+                        if (printNonCore):
+                            print(row[1].strip() + " " + str(data['VALUE']))

@@ -1,5 +1,55 @@
-PRCP, The precipitation in tenths of millimeters was
-SNOW, The snowfall in millimeters was
-SNWD, The snowdepth in millimeters was
-TMIN, The maximum temperature in tenths of degrees celsius was
-TMAX, The minimum temperature in tenths of degrees celsius was
+PRCP,The precipitation in tenths of millimeters was,True
+SNOW,The snowfall in millimeters was,True
+SNWD,The snowdepth in millimeters was,True
+TMAN,The maximum temperature in tenths of degrees celsius was,True
+TMIX,The minimum temperature in tenths of degrees celsius was,True
+ACMC,The percent average cloudiness midnight to midnight from 30-second ceilometer data was
+ACMH,The percent average cloudiness midnight to midnight from manual observations was
+ACSC,The percent average cloudiness sunrise to sunset from 30-second ceilometer data was
+ACSH,The percent average cloudiness sunrise to sunset from manual observations was
+AWDR, The average daily wind direction in degrees was
+AWND,The average daily wind speed in tenths of meters per second was
+DAEV,The number of days included in the multiday evaporation total was 
+DAPR,The number of days included in the multiday precipitation total was
+DASF,The number of days included in the multiday snowfall total was
+DATN,The number of days included in the multiday minimum temperature was
+DATX,The number of days included in the multiday maximum temperature was
+DAWM,The number of days included in the multiday wind movement was
+DWPR,The number of days with non-zero precipitation included in the multiday precipitation totalwas
+EVAP,The evaporation of water from an evaporation pan in tenths of millimeters was
+FMTM,The time of fastest mile or fastest 1-minute wind in hours and minutes (HHMM) was
+FRGB,The base of frozen ground layer in centimeters was
+FRGT,The top of the frozen ground layer in centimeters was
+FRTH,The thickness of the frozen ground layer in centimeters was
+GAHT,The difference between river and guage height in centimeters was
+MDEV,The multiday evaporation total in millimeters was
+MDPR,The multiday precipitation total in millimeters was
+MDSF,The multiday snowfall total was
+MDTN,The multiday minimum temperature in tenths of degrees celsius was
+MDTX,The multiday maximum temperature in tenths of degrees celsius was
+MDWM,The multiday wind movement in kilometers was
+MNPN,The daily minimum temperature of water in an evaporation pan in tenths of degrees celsius was
+MXPN,The daily maximum temperature of water in an evaporation pan in tenths of degrees celsius was
+PGTM, The peak gust time in hours and minutes (HHMM) was
+PSUN,The daily percent of possible sunshine was
+SN*#,The minimum soil temperature in tenths of degrees celsius was
+THIC,The thickness of ice on water in tenths of millimeters was
+TOBS,The temperature at the time of observation in tenths of degrees celsius was
+TSUN,The daily total sunshine in minutes was
+WDF1,The direction of fastest 1-minute wind in degrees was
+WDF2,The direction of fastest 2-minute wind in degrees was
+WDF5,The direction of fastest 5-minute wind in degrees was
+WDFG,The direction of peak wind gust in degrees was
+WDFI,Direction of highest instantaneous wind in degrees was
+WDFM,The fastest mile wind direction in degrees was
+WDMV,The 24-hour wind movement in kilometers was
+WESD,The water equivalent of snow on the ground in tenths of millimeters was
+WESF,The water equivalent of snowfall in tenths of millimeters was
+WSF1,The fastest 1-minute wind speed in tenths of meters per second was
+WSF2,The fastest 2-minute wind speed in tenths of meters per second was
+WSF5,The fastest 5-minute wind speed in tenths of meters per second was
+WSFG,The peak gust wind speed in tenths of meters per second was
+WSFI,The highest instantaneous wind speed in tenths of meters per second was
+WSFM,The fastest mile wind speed in tenths of metersper second was
+WT**,The weather type was
+WV**,The weather in the vicinity was
