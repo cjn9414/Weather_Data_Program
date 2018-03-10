@@ -44,7 +44,8 @@ def GetStation(relevent_stations):
 
     for index, row in relevent_stations.iterrows(): #loop through dataframe
         if (row['STORE_VAL'] == userSelection): #finds the station number the user chose
-                station_id = row['STATION'] #get id of station
+            print("You chose " + row['NAME'])
+            station_id = row['STATION'] #get id of station
     if (station_id == None): #invalid user input
         print("Sorry, that was not a possible number")
         sys.exit()

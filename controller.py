@@ -13,7 +13,6 @@ def OrderInfo(userInfo):
         appendFinish = False
         weather_df = pd.read_csv(url, sep=',', compression="gzip", usecols=[0,1,2,3]) #reads csv file url
         weather_df.columns = ['STATION', 'DATE', 'ELEMENT', 'VALUE'] # sets columns to csv file]
-        print(weather_df.info(memory_usage='deep'))
         dataIndex = 0 #row in dataframe
         iterate = 1000 #used to speed up loop
         while (not foundStationRange): #finds range of data
@@ -30,7 +29,6 @@ def OrderInfo(userInfo):
                     dataIndex -= iterate
                 foundStationRange = True
         print("Collecting data. May take a few seconds...\n")
-        print(dataIndex)
         while (not appendStart or not appendFinish): #sifts through data range to gather station info
             try:
                 row = weather_df.iloc[dataIndex]
@@ -46,8 +44,6 @@ def OrderInfo(userInfo):
                 else: #wrong date, end data search
                     appendFinish = True
             dataIndex += 1
-            if(dataIndex%10000 == 0):
-                print(dataIndex)
         if not activeStations:
             print("Sorry, no active stations in this state on this day.")
             sys.exit()
@@ -80,6 +76,7 @@ def OrderInfo(userInfo):
 
 
 def LocateData(stat_id, userInfo, weather_df):
+    print("Sorting data...")
     dataFound=False #conditional for data-sifting loops
     dataIndex=0 #row of data
     iterate = 1000 #used to 
@@ -93,8 +90,6 @@ def LocateData(stat_id, userInfo, weather_df):
                     userDate = int(userInfo['DAY']) #user input date
                     tempDate = int(str(dataPoint['DATE'])[4:]) #iterator date
                     temp_id = dataPoint['STATION']
-                    if (dataIndex%1000 == 0):
-                        print(dataIndex)
                     if (tempDate == userDate and
                             stat_id == temp_id): #data we are looking for
                         dataList.append(dataPoint)
