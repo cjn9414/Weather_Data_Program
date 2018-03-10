@@ -1,4 +1,4 @@
-from interface import GetInfo, GetStation, printData
+from interface import GetInfo, GetStation, printData, GetInput
 from controller import OrderInfo, LocateData
 def main():
     userInput = GetInfo()

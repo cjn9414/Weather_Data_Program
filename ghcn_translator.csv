@@ -1,13 +1,13 @@
 PRCP,The precipitation in tenths of millimeters was,True
 SNOW,The snowfall in millimeters was,True
 SNWD,The snowdepth in millimeters was,True
-TMAN,The maximum temperature in tenths of degrees celsius was,True
-TMIX,The minimum temperature in tenths of degrees celsius was,True
+TMAX,The maximum temperature in tenths of degrees celsius was,True
+TMIN,The minimum temperature in tenths of degrees celsius was,True
 ACMC,The percent average cloudiness midnight to midnight from 30-second ceilometer data was
 ACMH,The percent average cloudiness midnight to midnight from manual observations was
 ACSC,The percent average cloudiness sunrise to sunset from 30-second ceilometer data was
 ACSH,The percent average cloudiness sunrise to sunset from manual observations was
-AWDR, The average daily wind direction in degrees was
+AWDR,The average daily wind direction in degrees was
 AWND,The average daily wind speed in tenths of meters per second was
 DAEV,The number of days included in the multiday evaporation total was 
 DAPR,The number of days included in the multiday precipitation total was
@@ -30,7 +30,7 @@ MDTX,The multiday maximum temperature in tenths of degrees celsius was
 MDWM,The multiday wind movement in kilometers was
 MNPN,The daily minimum temperature of water in an evaporation pan in tenths of degrees celsius was
 MXPN,The daily maximum temperature of water in an evaporation pan in tenths of degrees celsius was
-PGTM, The peak gust time in hours and minutes (HHMM) was
+PGTM,The peak gust time in hours and minutes (HHMM) was
 PSUN,The daily percent of possible sunshine was
 SN*#,The minimum soil temperature in tenths of degrees celsius was
 THIC,The thickness of ice on water in tenths of millimeters was
