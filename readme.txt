@@ -1,8 +1,8 @@
-This is a project used to analzye data from a weather dataset. This project is for fun and practice in Python. As of now, I am using the GHCN-Daily dataset, which is a merged set of climate records coming from many different locations. Data is archived daily, which I will use to interpret in my Python program. The link to the index of the dataset as well as related citations are listed below:
+This is a project used to analyze data from a weather dataset. This project is for fun and practice in Python. As of now, I am using the GHCN-Daily dataset, which is a merged set of climate records coming from many different locations. Data is archived daily, which I will use to interpret in my Python program. The link to the index of the dataset as well as related citations are listed below:
 
 Index: ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/
 
-Journal articale describing GHCN-Daily:
+Journal article describing GHCN-Daily:
 
 Menne, M.J., I. Durre, R.S. Vose, B.E. Gleaseon, and T.G Houston, 2012: An overview of the Global Historical Climatology Newtork-Daily Database. Journal of Atmsopheric and Oceanic Technology, 29, 897-910, doi:10.1175/JTECH-D-11-00103.1.
 
